@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.Dao.EmployeeMapper">
+	<select id="selectEmployee"
+		parameterType="com.demo.Model.Employee" resultMap="employeeResult"
+		useCache="false">
+		select * from employee where id= #{id} and password=
+		#{password}
+	</select>
+	<resultMap type="com.demo.Model.Employee" id="employeeResult">
+		<result column="Id" property="Id" />
+
+		<result column="Password" property="Password" />
+		<result column="Sex" property="Sex" />
+		<result column="Age" property="Age" />
+		<result column="Job" property="Job" />
+		<result column="Salary" property="Salary" />
+		<result column="Branch" property="Branch" />
+		<result column="Phone" property="Phone" />
+	</resultMap>
+</mapper>
