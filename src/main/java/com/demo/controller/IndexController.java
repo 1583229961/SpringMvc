@@ -84,7 +84,7 @@ public class IndexController extends AbstractController{
 	      map.put("user",user);
 	      return map;
 	    }
-	    @RequestMapping(value="/requestbodybind.do",method = {RequestMethod.POST})  
+	    @RequestMapping(value="/requestbodybind",method = {RequestMethod.POST})  
 		@ResponseBody  
 		public User requestBodyBind(@RequestBody User user){  
 		      System.out.println("requestbodybind:" + user);  
